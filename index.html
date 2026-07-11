@@ -1,41 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wizzy</title>
-    <style>
-      body { font-family: system-ui, Arial, sans-serif; max-width: 800px; margin: 48px auto; padding: 0 16px; line-height: 1.6; }
-      h1 { margin-bottom: 0; }
-      .muted { color: #666; margin-top: 6px; }
-      a { color: inherit; }
-      .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 16px 0; }
-    </style>
-  </head>
-  <body>
-    <h1>Wizzy</h1>
-    <p class="muted">Software Engineer • Adelaide, AU</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Wesam Aldiab, a software engineering student focused on algorithms, systems and practical problem-solving."
+  />
+  <meta name="theme-color" content="#08111f" />
+  <title>Wesam Aldiab — Software Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <div class="card">
-      <h2>About</h2>
-      <p>
-        I build software and I’m currently sharpening my Core CS: data structures, algorithms, and software design.
-      </p>
-    </div>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Wesam Aldiab home">
+        <span class="brand-mark">WA</span>
+        <span class="brand-divider">//</span>
+      </a>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://github.com/thewisking/dsa-design-patterns">DSA + Design Patterns</a></li>
-      </ul>
-    </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-    <div class="card">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://github.com/thewisking">GitHub</a></li>
-        <!-- Add LinkedIn here when ready -->
-      </ul>
-    </div>
-  </body>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section-pad" aria-labelledby="hero-title">
+        <canvas id="signal-field" aria-hidden="true"></canvas>
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Software engineering student · Adelaide, SA</p>
+          <h1 id="hero-title">
+            I build systems that turn
+            <span class="text-gradient">hard problems</span>
+            into working software.
+          </h1>
+          <p class="hero-copy">
+            I’m Wesam Aldiab, a Bachelor of Engineering (Honours) student focused on algorithms,
+            software systems and learning unfamiliar technology quickly enough to make it useful.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="https://github.com/thewisking" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="assets/Wesam_Aldiab_Resume.pdf" target="_blank">Résumé</a>
+          </div>
+
+          <dl class="hero-stats" aria-label="Portfolio summary">
+            <div>
+              <dt>06</dt>
+              <dd>Selected projects</dd>
+            </div>
+            <div>
+              <dt>10+</dt>
+              <dd>Technologies used</dd>
+            </div>
+            <div>
+              <dt>2028</dt>
+              <dd>Expected graduation</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="system-panel reveal" aria-label="Current focus">
+          <div class="panel-topline">
+            <span>system.profile</span>
+            <span class="panel-live"><i></i> active</span>
+          </div>
+
+          <div class="logic-core" aria-hidden="true">
+            <div class="core-ring ring-one"></div>
+            <div class="core-ring ring-two"></div>
+            <div class="core-ring ring-three"></div>
+            <div class="core-node core-node-main">WA</div>
+            <div class="core-node core-node-a">C++</div>
+            <div class="core-node core-node-b">SQL</div>
+            <div class="core-node core-node-c">JS</div>
+            <div class="core-node core-node-d">HDL</div>
+          </div>
+
+          <div class="terminal-block" aria-hidden="true">
+            <p><span class="terminal-prompt">$</span> current_focus</p>
+            <p class="terminal-output">algorithms + systems + web</p>
+            <p><span class="terminal-prompt">$</span> approach</p>
+            <p class="terminal-output">break_down → research → build → test</p>
+            <p><span class="terminal-prompt">$</span> status <span class="terminal-cursor"></span></p>
+          </div>
+        </aside>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+          <span>Scroll to inspect</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="about section-pad" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / About</p>
+          <h2 id="about-title">Problem-solving first.<br />Everything else supports it.</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-copy reveal">
+            <p class="lead">
+              I enjoy the part of software engineering where a vague or difficult problem becomes a clear system:
+              inputs, constraints, decisions, tests and a result that actually works.
+            </p>
+            <p>
+              My university and personal projects have taken me from low-level digital logic and compiler work to
+              C++ algorithms, MATLAB applications and a database-backed Ruby on Rails website. When I encounter an
+              unfamiliar stack, I identify what the project needs, research the relevant concepts and learn by building.
+            </p>
+            <p>
+              I’m currently continuing that process during the university break by strengthening my HTML, CSS and
+              JavaScript skills. Front-end design is not my main interest, but becoming capable across the full path from
+              logic to interface makes me a more complete engineer.
+            </p>
+          </div>
+
+          <div class="principles-grid">
+            <article class="principle-card reveal">
+              <span class="principle-number">01</span>
+              <h3>Decompose</h3>
+              <p>Turn large requirements into smaller technical problems with clear boundaries.</p>
+            </article>
+            <article class="principle-card reveal">
+              <span class="principle-number">02</span>
+              <h3>Research</h3>
+              <p>Learn the concepts that directly unlock the next part of the build.</p>
+            </article>
+            <article class="principle-card reveal">
+              <span class="principle-number">03</span>
+              <h3>Verify</h3>
+              <p>Test assumptions, edge cases and integrations instead of trusting the first result.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section-pad" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading reveal">
+          <p class="section-index">02 / Selected work</p>
+          <div class="heading-row">
+            <h2 id="projects-title">Projects built to understand how things work.</h2>
+            <p>GitHub links are shown only where the source is publicly available.</p>
+          </div>
+        </div>
+
+        <div class="project-filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="algorithms">Algorithms</button>
+          <button class="filter-button" type="button" data-filter="systems">Systems</button>
+          <button class="filter-button" type="button" data-filter="web">Web</button>
+          <button class="filter-button" type="button" data-filter="games">Games</button>
+        </div>
+
+        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="skills section-pad" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading reveal">
+          <p class="section-index">03 / Technical toolkit</p>
+          <div class="heading-row">
+            <h2 id="skills-title">Technologies I have used.</h2>
+            <p>Some are established strengths; others are technologies I am actively developing.</p>
+          </div>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skills-cloud reveal" aria-label="Technology tags">
+            <span class="skill-tag skill-tag-strong">C++</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag skill-tag-strong">Ruby</span>
+            <span class="skill-tag">Ruby on Rails</span>
+            <span class="skill-tag skill-tag-strong">HTML</span>
+            <span class="skill-tag skill-tag-strong">CSS</span>
+            <span class="skill-tag skill-tag-learning">JavaScript · learning</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">HDL</span>
+            <span class="skill-tag">Hack Assembly</span>
+            <span class="skill-tag">Scilab</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">JSON</span>
+            <span class="skill-tag">MVC</span>
+            <span class="skill-tag">UML</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">SOLID</span>
+            <span class="skill-tag">Design Patterns</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+            <span class="skill-tag">CSP</span>
+            <span class="skill-tag">AC-3</span>
+            <span class="skill-tag">DFS / Backtracking</span>
+          </div>
+
+          <div class="skill-notes reveal">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Programming and algorithms</h3>
+                <p>C++, data structures, constraint solving, recursion, backtracking and problem decomposition.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Software and systems</h3>
+                <p>Object-oriented design, SOLID principles, design patterns, digital logic, compilers and virtual machines.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Application development</h3>
+                <p>Ruby on Rails, SQL, MATLAB, HTML, CSS and growing JavaScript capability.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey section-pad" id="journey" aria-labelledby="journey-title">
+        <div class="section-heading reveal">
+          <p class="section-index">04 / Journey</p>
+          <h2 id="journey-title">Learning in public, one difficult build at a time.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">2024 — 2028</div>
+            <div class="timeline-content">
+              <p class="timeline-label">Education</p>
+              <h3>Bachelor of Engineering (Honours) (Software)</h3>
+              <p>Adelaide University · Building foundations across programming, software design, systems and engineering practice.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Dec 2025 — Feb 2026</div>
+            <div class="timeline-content">
+              <p class="timeline-label">Independent development</p>
+              <h3>Ravi’s Study Program</h3>
+              <p>A volunteer-led summer program focused on data structures, algorithms and interview-style problem solving.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Feb 2026</div>
+            <div class="timeline-content">
+              <p class="timeline-label">Competitive programming</p>
+              <h3>ACPC × RSP Contest</h3>
+              <p>Worked in a team to solve programming problems under timed conditions.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Current</div>
+            <div class="timeline-content">
+              <p class="timeline-label">Current focus</p>
+              <h3>Front-end foundations</h3>
+              <p>Continuing to learn HTML, CSS and JavaScript while applying them to complete website projects.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="section-index">05 / Contact</p>
+            <h2 id="contact-title">Have a problem worth solving?</h2>
+            <p>
+              I’m interested in software engineering, technical research and placement opportunities where I can
+              contribute, learn quickly and work on systems with real constraints.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:wissamdiab122@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+            <button class="button button-secondary copy-email" type="button" data-email="wissamdiab122@gmail.com">Copy email</button>
+          </div>
+
+          <div class="contact-links">
+            <a href="https://github.com/thewisking" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/w-aldiab/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="assets/Wesam_Aldiab_Resume.pdf" target="_blank">Résumé <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Designed and built by Wesam Aldiab.</p>
+      <p>© <span id="current-year"></span> · Adelaide, South Australia</p>
+    </footer>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite">Email copied</div>
+</body>
 </html>
